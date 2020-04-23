@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    font-family: 'Gugi', cursive;
+    background: linear-gradient(to right, #364fd2, #89cade);
+}
+div{
+    border: 2px solid #30ff9b;
+    margin: 10px;
+    padding: 5px 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px #19bf55;
+}
+#principal {
+    width: 50px;
+    float: left;
+    border-radius: 50%;
+}
+div.DatosPersonales h3{
+    font-family: 'Girassol', cursive;
+    text-shadow: 5px 5px #999999;
+
+}
