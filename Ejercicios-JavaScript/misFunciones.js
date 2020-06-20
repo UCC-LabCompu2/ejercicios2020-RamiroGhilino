@@ -3,11 +3,11 @@
  */
 
 /**
- * Descripción
- * @method Nombre de la función
- * @param Parámetro A
- * @param Parámetro B
- * @return Valor que retorna
+ * Conversor de unidades entre metros, pies, pulgadas y yardas
+ * @method cambiarunidades
+ * @param {string} id - El id de los valores para el conversor
+ * @param {number} valor - el valor de los inputs según la unidad
+ * @return 
  */
 function cambiarunidades(Id, valor){
     if(isNaN(valor)){
