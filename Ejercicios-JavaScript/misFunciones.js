@@ -136,3 +136,26 @@ function dibujarCirCuad() {
      ctx.fill();
 
 }
+var bandera;
+function dibujar(event) {
+    var canvas= document.getElementById("CanvasADibujar")
+    var ctx= canvas.getContext("2d");
+
+    var posX= event.clientX;
+    var posY= event.clientY;
+
+    canvas.onmousedown = function(){bandera=true};
+    canvas.onmouseup = function(){bandera=false};
+    if(bandera){
+        ctx.fillRect(posX , posY , 5, 5);
+        ctx.fill;
+
+    }
+}
+
+function Limpiar() {
+    var canvas= document.getElementById("CanvasADibujar")
+    var ctx= canvas.getContext("2d");
+
+    canvas.width=canvas.width;
+}
