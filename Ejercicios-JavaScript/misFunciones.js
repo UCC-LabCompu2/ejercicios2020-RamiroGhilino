@@ -120,3 +120,19 @@ function cargarRes() {
 
     document.getElementById("dist").value= can + " " + un;
 }
+
+function dibujarCirCuad() {
+     var canvas =document.getElementById("myCanvas");
+     var ctx = canvas.getContext("2d");
+     var ymax=canvas.height;
+     var xmax=canvas.width;
+     var margen= 5;
+     ctx.fillStyle = "#333899";
+     ctx.fillRect(0 + margen , ymax-40-margen, 40,40);
+
+     ctx.arc(xmax/2, ymax/2, 60, 0, 2*Math.PI);
+     ctx.stroke();
+    ctx.fillStyle = "#fca71b";
+     ctx.fill();
+
+}
