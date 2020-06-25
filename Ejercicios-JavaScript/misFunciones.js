@@ -132,7 +132,7 @@ function dibujarCirCuad() {
 
      ctx.arc(xmax/2, ymax/2, 60, 0, 2*Math.PI);
      ctx.stroke();
-    ctx.fillStyle = "#fca71b";
+     ctx.fillStyle = "#fca71b";
      ctx.fill();
 
 }
@@ -154,8 +154,47 @@ function dibujar(event) {
 }
 
 function Limpiar() {
-    var canvas= document.getElementById("CanvasADibujar")
+    var canvas= document.getElementById("CanvasADibujar");
     var ctx= canvas.getContext("2d");
 
     canvas.width=canvas.width;
+}
+
+function Dibujar() {
+    var canvas = document.getElementById("Canvas");
+    var ctx = canvas.getContext("2d");
+    var alturaMax= canvas.height;
+    var anchoMax = canvas.width;
+    ctx.beginPath();
+    for(var i=0; i<alturaMax;){
+        ctx.moveTo(0,i);
+        ctx.lineTo(anchoMax, i);
+        ctx.strokeStyle = "#ffffff";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath();
+    ctx.beginPath();
+    for(var i=0; i<anchoMax;){
+        ctx.moveTo(i,0);
+        ctx.lineTo(i, alturaMax);
+        ctx.strokeStyle = "#f6f6f6";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath();
+//Eje X
+    ctx.beginPath();
+    ctx.moveTo(0,alturaMax/2);
+    ctx.lineTo(anchoMax, alturaMax/2);
+    ctx.strokeStyle = "#fa0202";
+    ctx.stroke();
+    ctx.closePath();
+//Eje Y
+    ctx.beginPath();
+    ctx.moveTo(anchoMax/2,0);
+    ctx.lineTo(anchoMax/2, alturaMax);
+    ctx.strokeStyle = "#fa0202";
+    ctx.stroke();
+    ctx.closePath();
 }
